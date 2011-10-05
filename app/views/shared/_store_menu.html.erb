@@ -1,4 +1,4 @@
 <li><%= link_to t("home") , root_path %></li>
-    <% if Spree::Config[:allow_backorders] =="1" %>
+    <% if Spree::Config[:cart_enabled] =="1" %>
 		<li class="cart-indicator"><%= link_to_cart %></li>
 	<% end %>

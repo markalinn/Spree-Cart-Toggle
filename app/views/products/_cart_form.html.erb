@@ -36,7 +36,7 @@
     </div>
   <% end%>
   <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
-    <% if Spree::Config[:allow_backorders] =="1" %>
+    <% if Spree::Config[:cart_enabled] =="1" %>
 	    <%= text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
 	      1, :class => "title", :size => 3 %>
 	    &nbsp;
